@@ -1,0 +1,127 @@
+.banner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    padding: 160px 24px 100px;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.48) 0%,
+            rgba(0, 0, 0, 0.62) 70%,
+            rgba(0, 0, 0, 0.82) 100%
+        ),
+        url('../images/foto-encontros/BANNER.jpg');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        height: 180px;
+
+        background:
+            linear-gradient(
+                to bottom,
+                transparent,
+                rgba(0, 0, 0, 0.48)
+            );
+
+        pointer-events: none;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        max-width: 1000px;
+
+        color: rgba(255, 255, 255, 0.72);
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.txt-animado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 24px;
+
+    color: rgba(255, 255, 255, 0.62);
+    font-size: clamp(1rem, 2.2vw, 1.55rem);
+    white-space: nowrap;
+
+    .texto-base {
+        color: rgba(255, 255, 255, 0.62);
+    }
+}
+
+#typewriter {
+    overflow: hidden;
+    padding-right: 5px;
+
+    border-right: 2px solid rgba(255, 255, 255, 0.9);
+
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        min-height: 92vh;
+        padding: 130px 20px 80px;
+    }
+
+    .txt-animado {
+        flex-wrap: wrap;
+
+        white-space: normal;
+    }
+
+    #typewriter {
+        white-space: normal;
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Painel Administrativo</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body
+    class="admin-page"
+    data-admin-page="dashboard"
+    data-page-title="Dashboard"
+>
+
+    <div class="admin-layout">
+
+        <div id="sidebar-container"></div>
+
+        <div class="admin-layout__content">
+
+            <div id="topbar-container"></div>
+
+            <main class="admin-dashboard">
+
+                <section class="admin-dashboard__welcome">
+
+                    <div>
+                        <span class="admin-dashboard__eyebrow">
+                            VISÃO GERAL
+                        </span>
+
+                        <h2>Bem-vindo ao painel</h2>
+
+                        <p>
+                            Acompanhe e gerencie os conteúdos públicos do site.
+                        </p>
+                    </div>
+
+                    <a
+                        href="./eventos.html"
+                        class="admin-button admin-button--primary"
+                    >
+                        Novo evento
+                    </a>
+
+                </section>
+
+                <section class="admin-dashboard__summary">
+
+                    <div class="admin-dashboard__cards">
+
+                        <article class="admin-summary-card">
+
+                            <div class="admin-summary-card__header">
+                                <span class="admin-summary-card__icon">▣</span>
+                                <span>Eventos</span>
+                            </div>
+
+                            <strong id="total-eventos">
+                                ...
+                            </strong>
+
+                            <p>Total de eventos cadastrados</p>
+
+                            <a href="./eventos.html">
+                                Gerenciar eventos
+                            </a>
+
+                        </article>
+
+                        <article class="admin-summary-card">
+
+                            <div class="admin-summary-card__header">
+                                <span class="admin-summary-card__icon">♟</span>
+                                <span>Ministérios</span>
+                            </div>
+
+                            <strong id="total-ministerios">
+                                ...
+                            </strong>
+
+                            <p>Total de ministérios cadastrados</p>
+
+                            <a href="./ministerios.html">
+                                Gerenciar ministérios
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <section class="admin-dashboard__recent">
+
+                    <div class="admin-section-heading">
+
+                        <div>
+                            <span class="admin-dashboard__eyebrow">
+                                CONTEÚDO
+                            </span>
+
+                            <h2>Eventos recentes</h2>
+                        </div>
+
+                        <a href="./eventos.html">
+                            Ver todos
+                        </a>
+
+                    </div>
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Evento</th>
+                                    <th>Data</th>
+                                    <th>Ministério</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="eventos-recentes">
+                                <tr>
+                                    <td colspan="4">
+                                        Carregando eventos...
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+                <section class="admin-dashboard__actions">
+
+                    <div class="admin-section-heading">
+                        <div>
+                            <span class="admin-dashboard__eyebrow">
+                                ATALHOS
+                            </span>
+
+                            <h2>Ações rápidas</h2>
+                        </div>
+                    </div>
+
+                    <div class="admin-quick-actions">
+
+                        <a href="./eventos.html">
+                            <strong>Novo evento</strong>
+                            <span>Cadastre um encontro no site.</span>
+                        </a>
+
+                        <a href="./ministerios.html">
+                            <strong>Novo ministério</strong>
+                            <span>Cadastre uma área da igreja.</span>
+                        </a>
+
+                        <a href="../index.html" target="_blank">
+                            <strong>Visualizar site</strong>
+                            <span>Veja o conteúdo público.</span>
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <p id="mensagem-dashboard" role="alert"></p>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <script
+        type="module"
+        src="../scripts/admin/layout.js"
+    ></script>
+
+    <script
+        type="module"
+        src="../scripts/admin/dashboard.js"
+    ></script>
+
+</body>
+
+</html>

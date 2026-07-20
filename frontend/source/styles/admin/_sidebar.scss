@@ -1,0 +1,124 @@
+.admin-sidebar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    padding: 28px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    background: #111114;
+    z-index: 100;
+}
+
+.admin-sidebar__site {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 42px;
+    margin-top: 24px;
+    padding: 0 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    color: #b8b8bf;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+
+    &:hover {
+        color: #f9a825;
+        border-color: rgba(249, 168, 37, 0.35);
+        background: rgba(249, 168, 37, 0.08);
+    }
+}
+
+.admin-sidebar__brand {
+    padding: 0 12px 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    span {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #f9a825;
+    }
+}
+
+.admin-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 28px;
+
+    a {
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 16px;
+        border-radius: 10px;
+        color: #b8b8bf;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(3px);
+        }
+
+        &.ativo {
+            color: #111;
+            background: #f9a825;
+            font-weight: 700;
+        }
+    }
+}
+
+#btn-logout-sidebar {
+    width: 100%;
+    min-height: 46px;
+    margin-top: auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: transparent;
+    color: #ff8a80;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+
+    &:hover {
+        border-color: rgba(255, 82, 82, 0.45);
+        background: rgba(255, 82, 82, 0.08);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .admin-sidebar {
+        position: fixed;
+        left: -280px;
+        width: 260px;
+        transition: left 0.3s ease;
+        box-shadow: 15px 0 40px rgba(0, 0, 0, 0.45);
+
+        &.aberta {
+            left: 0;
+        }
+    }
+}

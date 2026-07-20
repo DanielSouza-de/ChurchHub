@@ -1,0 +1,207 @@
+#inicio {
+    scroll-margin-top: 90px;
+
+    .container {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+        align-items: center;
+        gap: 48px;
+
+        padding: 48px;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 22px;
+
+        background-color: rgba(20, 20, 20, 0.76);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+
+        color: #fff;
+    }
+}
+
+.image {
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    img {
+        width: 100%;
+        max-width: 500px;
+        aspect-ratio: 4 / 3;
+
+        border-radius: 16px;
+
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+
+.texto {
+    max-width: 650px;
+
+    p {
+        font-family: 'Lora', serif;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 1.75;
+    }
+
+    h2 {
+        margin-bottom: 18px;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+}
+
+.container-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-identidade,
+.card-encontros {
+    margin-bottom: 24px;
+    padding: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+
+    background-color: rgba(20, 20, 20, 0.72);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(12px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 24px 55px rgba(0, 0, 0, 0.22);
+
+        transform: translateY(-4px);
+    }
+}
+
+.titulo-identify {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.subtitulo-identify {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.paragrafo-identify {
+    font-size: clamp(1rem, 2vw, 1.35rem);
+}
+
+.paragrafo-sobre {
+    margin-bottom: 32px;
+}
+
+.paragrafo-cultos,
+.passos {
+    img {
+        width: min(100%, 600px);
+        margin: 0 auto;
+
+        border-radius: 18px;
+
+        box-shadow: 0 20px 55px rgba(0, 0, 0, 0.25);
+
+        transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease;
+
+        &:hover {
+            box-shadow: 0 28px 65px rgba(0, 0, 0, 0.32);
+
+            transform: translateY(-4px) scale(1.015);
+        }
+    }
+}
+
+#cultos-igreja h2,
+#nossa-identidade h2 {
+    margin-bottom: 48px;
+}
+
+.legenda-cultos,
+.legenda-identidade {
+    margin-top: 32px;
+    padding-bottom: 48px;
+}
+
+.social-links {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        list-style: none;
+    }
+
+    li {
+        display: inline-flex;
+        margin: 0;
+    }
+
+    a {
+        display: inline-flex;
+
+        text-decoration: none;
+    }
+
+    img {
+        width: 26px;
+        height: 26px;
+
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #inicio {
+        .container {
+            grid-template-columns: 1fr;
+
+            padding: 32px;
+
+            text-align: center;
+        }
+    }
+
+    .image img {
+        margin: 0 auto;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .container-flex {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #inicio {
+        .container {
+            padding: 22px;
+        }
+    }
+
+    .card-identidade,
+    .card-encontros {
+        padding: 22px;
+    }
+}

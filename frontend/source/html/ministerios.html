@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ministérios</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles/main.css"
+    >
+
+    <link
+        id="favicon-site"
+        rel="icon"
+        type="image/png"
+        href="https://placehold.co/64x64?text=Logo"
+    >
+</head>
+
+<body class="identity-page">
+
+    <header
+        class="rolagem"
+        id="header"
+    >
+
+        <div class="container">
+
+            <div class="flex">
+
+                <a
+                    href="index.html"
+                    aria-label="Página inicial"
+                >
+                    <img
+                        id="logo-site"
+                        src="https://placehold.co/300x300?text=Logo"
+                        alt="Logo da igreja"
+                    >
+                </a>
+
+                <div class="menu">
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    Início
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="encontros.html">
+                                    Encontros
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="ministerios.html"
+                                    class="foco"
+                                >
+                                    Ministérios
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div
+                    class="menu-mobile"
+                    id="menu-mobile"
+                >
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    Início
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="encontros.html">
+                                    Encontros
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="ministerios.html"
+                                    class="foco"
+                                >
+                                    Ministérios
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="btn-menu"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                >
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="ministerios-igreja">
+
+            <div class="container">
+
+                <div class="ministerios-cabecalho">
+
+                    <div>
+                        <span class="ministerios-tag">
+                            COMUNIDADE
+                        </span>
+
+                        <h1 class="titulo-ministerios">
+                            Nossos ministérios
+                        </h1>
+
+                        <p>
+                            Conheça as equipes e áreas de atuação da igreja.
+                        </p>
+                    </div>
+
+                    <div class="ministerios-filtros">
+
+                        <label
+                            for="pesquisa-ministerios"
+                            class="sr-only"
+                        >
+                            Pesquisar ministério
+                        </label>
+
+                        <input
+                            type="search"
+                            id="pesquisa-ministerios"
+                            placeholder="Pesquisar ministério..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="lista-ministerios-publico"
+                    class="lista-ministerios-publica"
+                    aria-live="polite"
+                >
+                    <p>Carregando ministérios...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <ul>
+                <li>
+                    <h3 id="nome-igreja-footer">
+                        Nome da Igreja
+                    </h3>
+                </li>
+
+                <li>
+                    <p id="slogan-footer">
+                        Uma comunidade para acolher, servir e transformar vidas
+                    </p>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h3>Venha nos visitar</h3>
+                </li>
+
+                <li>
+                    <p id="endereco-footer">
+                        Endereço da igreja
+                    </p>
+                </li>
+
+                <li id="telefone-container">
+                    <a
+                        id="telefone-footer"
+                        href="#"
+                    >
+                        Telefone
+                    </a>
+                </li>
+
+                <li id="whatsapp-container">
+                    <a
+                        id="whatsapp-footer"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+                </li>
+
+                <li id="email-container">
+                    <a
+                        id="email-footer"
+                        href="#"
+                    >
+                        E-mail
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h3>Siga nossas redes</h3>
+                </li>
+
+                <li>
+                    <div class="redes-sociais">
+
+                        <a
+                            id="facebook-site"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon"
+                            aria-label="Facebook"
+                        >
+                            <img
+                                src="images/icones/facebook.png"
+                                alt="Facebook"
+                            >
+                        </a>
+
+                        <a
+                            id="instagram-site"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon"
+                            aria-label="Instagram"
+                        >
+                            <img
+                                src="images/icones/instagram.png"
+                                alt="Instagram"
+                            >
+                        </a>
+
+                        <a
+                            id="youtube-site"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon"
+                            aria-label="YouTube"
+                        >
+                            <img
+                                src="images/icones/youtube.png"
+                                alt="YouTube"
+                            >
+                        </a>
+
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+    <script
+        type="module"
+        src="scripts/main.js"
+    ></script>
+
+    <script
+        type="module"
+        src="scripts/public/configuracoes-site.js"
+    ></script>
+
+    <script
+        type="module"
+        src="scripts/public/ministerios.js"
+    ></script>
+
+</body>
+
+</html>

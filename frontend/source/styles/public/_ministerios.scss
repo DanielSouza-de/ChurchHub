@@ -1,0 +1,261 @@
+#ministerios-igreja {
+    min-height: calc(100vh - 220px);
+    padding-top: 90px;
+}
+
+.ministerios-cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+
+    margin-bottom: 42px;
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    > div:first-child {
+        max-width: 720px;
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.05rem;
+    }
+}
+
+.ministerios-tag,
+.ministerio-tag {
+    display: inline-flex;
+
+    padding: 6px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+
+    background-color: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.ministerios-tag {
+    margin-bottom: 12px;
+}
+
+.titulo-ministerios {
+    margin-bottom: 12px;
+
+    color: #fff;
+
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    letter-spacing: -0.04em;
+}
+
+.ministerios-filtros {
+    input {
+        width: min(350px, 100%);
+        min-height: 48px;
+        padding: 0 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        outline: none;
+
+        background-color: rgba(20, 20, 20, 0.78);
+        color: #fff;
+        backdrop-filter: blur(12px);
+
+        transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease,
+            background-color 0.25s ease;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        &:focus {
+            border-color: rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+            background-color: rgba(20, 20, 20, 0.95);
+        }
+    }
+}
+
+.lista-ministerios-publica,
+#lista-ministerios-publico {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card-ministerio-publico,
+.card-ministerio {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 310px;
+    padding: 28px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255, 255, 255, 0.08),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(31, 31, 31, 0.94),
+            rgba(16, 16, 16, 0.94)
+        );
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(14px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.65),
+                transparent
+            );
+
+        opacity: 0;
+
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+
+        transform: translateY(-7px);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &__topo {
+        margin-bottom: 20px;
+
+        h3 {
+            margin-top: 18px;
+            margin-bottom: 0;
+
+            color: #fff;
+
+            font-size: 1.55rem;
+            line-height: 1.3;
+        }
+    }
+
+    &__descricao {
+        flex: 1;
+
+        margin-bottom: 24px;
+
+        color: rgba(255, 255, 255, 0.68);
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    &__rodape {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+
+        padding-top: 20px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        p {
+            margin: 0;
+
+            color: rgba(255, 255, 255, 0.68);
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        strong {
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .lista-ministerios-publica,
+    #lista-ministerios-publico {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ministerios-cabecalho {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ministerios-filtros {
+        input {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #ministerios-igreja {
+        padding-top: 60px;
+    }
+
+    .lista-ministerios-publica,
+    #lista-ministerios-publico {
+        grid-template-columns: 1fr;
+    }
+
+    .card-ministerio-publico,
+    .card-ministerio {
+        min-height: 280px;
+        padding: 22px;
+
+        &__rodape {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+}

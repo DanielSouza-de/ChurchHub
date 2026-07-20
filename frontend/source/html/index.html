@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title id="titulo-site">
+        Nome da Igreja
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    >
+
+    <link
+        id="favicon-site"
+        rel="icon"
+        type="image/png"
+        href="https://placehold.co/64x64?text=Logo"
+    >
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script
+        src="scripts/reveal.js"
+        defer
+    ></script>
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div class="container">
+
+            <div class="flex">
+
+                <a
+                    href="index.html"
+                    aria-label="Página inicial"
+                >
+                    <img
+                        id="logo-site"
+                        src="https://placehold.co/300x300?text=Logo"
+                        alt="Logo da igreja"
+                    >
+                </a>
+
+                <div class="menu">
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a
+                                    href="index.html"
+                                    class="foco"
+                                >
+                                    Início
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="encontros.html">
+                                    Encontros
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="ministerios.html">
+                                    Ministérios
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div
+                    class="menu-mobile"
+                    id="menu-mobile"
+                >
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    Início
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="encontros.html">
+                                    Encontros
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="ministerios.html">
+                                    Ministérios
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="btn-menu"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                >
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                    <span class="linha"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section
+            class="banner"
+            id="banner-site"
+        >
+
+            <h1
+                class="h1-topo"
+                id="nome-igreja-banner"
+            >
+                Nome da Igreja
+            </h1>
+
+            <div class="txt-animado span-topo">
+
+                <span
+                    class="texto-base"
+                    id="slogan-site"
+                >
+                    Uma comunidade para acolher, servir e transformar vidas
+                </span>
+
+                <span
+                    class="animado"
+                    id="typewriter"
+                ></span>
+
+            </div>
+
+            <a
+                href="#inicio"
+                class="btn-saiba-mais botao-inicio"
+            >
+                Saiba mais
+            </a>
+
+        </section>
+
+        <section id="inicio">
+
+            <div class="container">
+
+                <div class="image">
+
+                    <img
+                        id="foto-pastor-site"
+                        class="foto-pastor"
+                        src="https://placehold.co/600x800?text=Foto+do+Pastor"
+                        alt="Foto do pastor"
+                    >
+
+                </div>
+
+                <div class="texto">
+
+                    <h2
+                        class="titulo-pag1"
+                        id="titulo-apresentacao"
+                    >
+                        Bem-vindos à nossa igreja!
+                    </h2>
+
+                    <p
+                        class="paragrafo1"
+                        id="texto-apresentacao"
+                    >
+                        Escreva aqui uma apresentação da igreja, sua missão,
+                        seus valores e a mensagem que deseja transmitir aos
+                        visitantes.
+                    </p>
+
+                    <p
+                        class="paragrafo4"
+                        id="nome-pastor"
+                    >
+                        Pr. Nome do Pastor
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="eventos-destaque">
+
+            <div class="container">
+
+                <h2>Próximos encontros</h2>
+
+                <div id="lista-eventos-home">
+                    <p>Carregando encontros...</p>
+                </div>
+
+                <a
+                    href="encontros.html"
+                    class="btn-saiba-mais"
+                >
+                    Ver todos os encontros
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="ministerios-destaque">
+
+            <div class="container">
+
+                <h2>Nossos ministérios</h2>
+
+                <div id="lista-ministerios-home">
+                    <p>Carregando ministérios...</p>
+                </div>
+
+                <a
+                    href="ministerios.html"
+                    class="btn-saiba-mais"
+                >
+                    Ver todos os ministérios
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <ul>
+                <li>
+                    <h3 id="nome-igreja-footer">
+                        Nome da Igreja
+                    </h3>
+                </li>
+
+                <li>
+                    <p id="slogan-footer">
+                        Uma comunidade para acolher, servir e transformar vidas
+                    </p>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <h3>Venha nos visitar</h3>
+                </li>
+
+                <li>
+                    <p id="endereco-footer">
+                        Endereço da igreja
+                    </p>
+                </li>
+
+                <li id="telefone-container">
+                    <a
+                        id="telefone-footer"
+                        href="#"
+                    >
+                        Telefone
+                    </a>
+                </li>
+
+                <li id="whatsapp-container">
+                    <a
+                        id="whatsapp-footer"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+                </li>
+
+                <li id="email-container">
+                    <a
+                        id="email-footer"
+                        href="#"
+                    >
+                        E-mail
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+
+                <li>
+                    <h3>Siga nossas redes</h3>
+                </li>
+
+                <li>
+                    <div class="redes-sociais">
+
+                        <a
+                            id="facebook-site"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon"
+                            aria-label="Facebook"
+                        >
+                            <img
+                                src="images/icones/facebook.png"
+                                alt="Facebook"
+                            >
+                        </a>
+
+                        <a
+                            id="instagram-site"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon"
+                            aria-label="Instagram"
+                        >
+                            <img
+                                src="images/icones/instagram.png"
+                                alt="Instagram"
+                            >
+                        </a>
+
+                        <a
+                            id="youtube-site"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon"
+                            aria-label="YouTube"
+                        >
+                            <img
+                                src="images/icones/youtube.png"
+                                alt="YouTube"
+                            >
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="footer-bottom">
+
+    <p>
+        © <span id="ano-atual">2026</span>
+
+        <span id="nome-igreja-copy">
+            Nome da Igreja
+        </span>.
+
+        Todos os direitos reservados.
+    </p>
+
+    <a
+        href="admin/login.html"
+        class="footer-admin"
+    >
+        Área administrativa
+    </a>
+
+</div>
+
+        </div>
+
+    </footer>
+
+    <script
+        type="module"
+        src="scripts/main.js"
+    ></script>
+
+    <script
+        type="module"
+        src="scripts/public/configuracoes-site.js"
+    ></script>
+
+    <script
+        type="module"
+        src="scripts/public/home.js"
+    ></script>
+
+</body>
+
+</html>

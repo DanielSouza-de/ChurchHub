@@ -1,0 +1,281 @@
+#encontros-igreja,
+#eventos-igreja {
+    min-height: calc(100vh - 220px);
+    padding-top: 90px;
+}
+
+.eventos-cabecalho,
+.encontros-cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+
+    margin-bottom: 42px;
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    > div:first-child {
+        max-width: 720px;
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.05rem;
+    }
+}
+
+.eventos-tag,
+.encontros-tag {
+    display: inline-flex;
+
+    margin-bottom: 12px;
+    padding: 6px 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+
+    background-color: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.titulo-eventos,
+.titulo-encontros {
+    margin-bottom: 12px;
+
+    color: #fff;
+
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    letter-spacing: -0.04em;
+}
+
+.eventos-filtros,
+.encontros-filtros {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    input,
+    select {
+        min-height: 48px;
+        padding: 0 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        outline: none;
+
+        background-color: rgba(20, 20, 20, 0.78);
+        color: #fff;
+        backdrop-filter: blur(12px);
+
+        transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease,
+            background-color 0.25s ease;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        &:focus {
+            border-color: rgba(255, 255, 255, 0.55);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+            background-color: rgba(20, 20, 20, 0.95);
+        }
+    }
+
+    input {
+        width: min(330px, 100%);
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    select {
+        min-width: 200px;
+
+        cursor: pointer;
+
+        option {
+            background-color: #1b1b1b;
+            color: #fff;
+        }
+    }
+}
+
+.lista-eventos-publica,
+#lista-eventos-publico {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card-evento-publico,
+.card-evento {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31, 31, 31, 0.92),
+            rgba(17, 17, 17, 0.92)
+        );
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(14px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 28px 65px rgba(0, 0, 0, 0.3);
+
+        transform: translateY(-7px);
+    }
+
+    img,
+    &__imagem {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.04);
+    }
+
+    &__conteudo {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        padding: 24px;
+    }
+
+    &__topo {
+        margin-bottom: 12px;
+    }
+
+    &__data,
+    .evento-data {
+        display: inline-flex;
+
+        margin-bottom: 14px;
+        padding: 6px 10px;
+
+        border-radius: 999px;
+
+        background-color: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.82);
+
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        margin-bottom: 12px;
+
+        color: #fff;
+
+        font-size: 1.45rem;
+        line-height: 1.3;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.67);
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    &__rodape {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        margin-top: auto;
+        padding-top: 20px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .lista-eventos-publica,
+    #lista-eventos-publico {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .eventos-cabecalho,
+    .encontros-cabecalho {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .eventos-filtros,
+    .encontros-filtros {
+        input {
+            flex: 1;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #encontros-igreja,
+    #eventos-igreja {
+        padding-top: 60px;
+    }
+
+    .lista-eventos-publica,
+    #lista-eventos-publico {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos-filtros,
+    .encontros-filtros {
+        align-items: stretch;
+        flex-direction: column;
+
+        input,
+        select {
+            width: 100%;
+            min-width: 0;
+        }
+    }
+
+    .card-evento-publico,
+    .card-evento {
+        &__conteudo {
+            padding: 20px;
+        }
+    }
+}

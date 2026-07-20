@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gerenciar Ministérios</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body
+    class="admin-page"
+    data-admin-page="ministerios"
+    data-page-title="Ministérios"
+>
+
+    <div class="admin-layout">
+
+        <div id="sidebar-container"></div>
+
+        <div class="admin-layout__content">
+
+            <div id="topbar-container"></div>
+
+            <main class="admin-content-page">
+
+                <section class="admin-page-header">
+
+                    <div>
+                        <span class="admin-page-header__tag">
+                            MINISTÉRIOS
+                        </span>
+
+                        <h2>Gerenciar ministérios</h2>
+
+                        <p>
+                            Cadastre e organize os ministérios exibidos no site.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="btn-novo-ministerio"
+                        class="admin-button admin-button--primary"
+                    >
+                        + Novo ministério
+                    </button>
+
+                </section>
+
+                <section class="admin-content-card">
+
+                    <div class="admin-content-card__header">
+
+                        <div>
+                            <h2>Ministérios cadastrados</h2>
+                            <p>Visualize e gerencie todos os ministérios.</p>
+                        </div>
+
+                        <input
+                            type="search"
+                            id="pesquisa-ministerio"
+                            class="admin-search-input"
+                            placeholder="Pesquisar ministério..."
+                        >
+
+                    </div>
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Ministério</th>
+                                    <th>Líder</th>
+                                    <th>Descrição</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="lista-ministerios-admin">
+                                <tr>
+                                    <td colspan="4">
+                                        Carregando ministérios...
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <div
+        class="admin-modal"
+        id="modal-ministerio"
+        aria-hidden="true"
+    >
+
+        <div
+            class="admin-modal__overlay"
+            data-fechar-modal
+        ></div>
+
+        <section
+            class="admin-modal__content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-formulario"
+        >
+
+            <div class="admin-modal__header">
+
+                <div>
+                    <span class="admin-page-header__tag">
+                        FORMULÁRIO
+                    </span>
+
+                    <h2 id="titulo-formulario">
+                        Cadastrar ministério
+                    </h2>
+                </div>
+
+                <button
+                    type="button"
+                    id="btn-fechar-modal"
+                    class="admin-modal__close"
+                    aria-label="Fechar formulário"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <form
+                id="form-ministerio"
+                class="admin-form"
+            >
+
+                <input
+                    type="hidden"
+                    id="ministerio-id"
+                >
+
+                <div class="admin-form__group">
+                    <label for="nome">Nome</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        required
+                    >
+                </div>
+
+                <div class="admin-form__group">
+                    <label for="lider">Líder</label>
+
+                    <input
+                        type="text"
+                        id="lider"
+                        required
+                    >
+                </div>
+
+                <div class="admin-form__group">
+                    <label for="descricao">Descrição</label>
+
+                    <textarea
+                        id="descricao"
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <p
+                    id="mensagem-ministerio"
+                    role="alert"
+                ></p>
+
+                <div class="admin-form__actions">
+
+                    <button
+                        type="button"
+                        id="btn-cancelar"
+                        class="admin-button admin-button--secondary"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="btn-salvar"
+                        class="admin-button admin-button--primary"
+                    >
+                        Salvar ministério
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </div>
+
+    <script
+        type="module"
+        src="../scripts/admin/layout.js"
+    ></script>
+
+    <script
+        type="module"
+        src="../scripts/admin/ministerios.js"
+    ></script>
+
+</body>
+
+</html>

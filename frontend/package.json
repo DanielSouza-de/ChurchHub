@@ -1,0 +1,22 @@
+{
+  "name": "ministerio-casa-de-cura-web",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.89.1"
+  },
+  "dependencies": {
+    "del": "^5.1.0"
+  }
+}
