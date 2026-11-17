@@ -1,5 +1,5 @@
 {
-  "name": "ministerio-casa-de-cura-web",
+  "name": "churchhub-web",
   "version": "1.0.0",
   "scripts": {
     "dev": "gulp",
