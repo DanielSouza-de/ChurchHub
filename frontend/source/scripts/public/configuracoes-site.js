@@ -17,7 +17,7 @@ const configuracoesPadrao = {
     facebook: "",
     youtube: "",
     logo: "https://placehold.co/300x300?text=Logo",
-    banner: "https://placehold.co/1920x1080?text=Banner"
+    banner: "../images/banner/BANNER.jpg"
 };
 
 document.addEventListener(
