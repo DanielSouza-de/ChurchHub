@@ -1,4 +1,4 @@
-import { listarEventos } from "./api.js";
+import { listarEventos } from "./services/api.js";
 
 const header = document.querySelector("header");
 const menuMobile = document.getElementById("menu-mobile");
