@@ -357,7 +357,6 @@ filtroMinisterio?.addEventListener(
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-        digitar();
         carregarEventos();
     }
 );
