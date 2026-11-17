@@ -4,7 +4,7 @@ import {
     salvarItem
 } from "./storage.js";
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://churchhub-api-eha7.onrender.com";
 const AUTH_URL = `${BASE_URL}/auth`;
 
 const TOKEN_KEY = "token";
